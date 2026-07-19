@@ -14,7 +14,7 @@ Then open `http://localhost:8000/`. Serving through HTTP is recommended instead 
 
 ## Project structure
 
-- The ten root-level `.html` files are small semantic page shells.
+- The eleven root-level `.html` files are small semantic page shells.
 - `css/` separates global, navigation, card, footer, animation, and responsive styles.
 - `js/config.js` is the single source of truth for branding, external URLs, applications, image paths, and department identity.
 - `js/components.js` provides reusable UI components; `js/page-renderers.js` composes each page; the remaining scripts manage navigation, FAQs, animations, and startup.
@@ -23,7 +23,7 @@ Then open `http://localhost:8000/`. Serving through HTTP is recommended instead 
 ## Replace images
 
 1. Add optimized replacement files to the appropriate folder under `assets/` (WebP is recommended for photographic hero art; PNG or SVG works well for transparent logos).
-2. Edit only the matching path in `SITE_CONFIG.assets` inside `js/config.js`.
+2. Edit general branding/background paths in `SITE_CONFIG.assets`; edit each department’s `logo` and `background` paths in `SITE_CONFIG.departments`, all inside `js/config.js`.
 3. Keep hero images near a 16:9 aspect ratio and department logos square to minimize layout shifts.
 4. Add accurate alternative-text wording in the relevant reusable renderer if the final image communicates more than its department identity.
 
@@ -32,6 +32,7 @@ Then open `http://localhost:8000/`. Serving through HTTP is recommended instead 
 In `js/config.js`, fill in:
 
 - `SITE_CONFIG.links.discord`, `cad`, `tiktok`, and `youtube`;
+- each department’s `application` property in `SITE_CONFIG.departments` (SAST, BCSO, LSPD, SAFR, SADOT, and SACD).
 - `SITE_CONFIG.applications.sast`, `bcso`, `lspd`, `safr`, and `sadot`.
 
 Use complete HTTPS URLs. Blank values intentionally render as disabled **Coming Soon** controls. Configured external links automatically open in a new tab with `rel="noopener noreferrer"`.
@@ -39,6 +40,11 @@ Use complete HTTPS URLs. Blank values intentionally render as disabled **Coming 
 ## Placeholder content remaining
 
 - Main branding logo and favicon.
+- Eight hero backgrounds and six department logos.
+- Official mission statements for every department.
+- All official server-rule text.
+- All final FAQ answers.
+- Discord, CAD, TikTok, YouTube, and six department application URLs.
 - Seven hero backgrounds and five department logos.
 - Official mission statements for every department.
 - All official server-rule text.
