@@ -1,0 +1,7 @@
+function initializeNavigation() {
+  const toggle = document.querySelector(".menu-toggle"); const panel = document.querySelector(".nav-panel");
+  toggle.addEventListener("click", () => { const open = toggle.getAttribute("aria-expanded") === "true"; toggle.setAttribute("aria-expanded", String(!open)); panel.classList.toggle("is-open", !open); });
+  document.querySelectorAll(".nav-dropdown__toggle").forEach(button => button.addEventListener("click", event => { event.stopPropagation(); const parent = button.parentElement; document.querySelectorAll(".nav-dropdown.is-open").forEach(x => { if (x !== parent) { x.classList.remove("is-open"); x.querySelector("button").setAttribute("aria-expanded", "false"); } }); const open = parent.classList.toggle("is-open"); button.setAttribute("aria-expanded", String(open)); }));
+  document.addEventListener("click", event => { if (!event.target.closest(".nav-dropdown")) document.querySelectorAll(".nav-dropdown.is-open").forEach(x => { x.classList.remove("is-open"); x.querySelector("button").setAttribute("aria-expanded", "false"); }); });
+  document.addEventListener("keydown", event => { if (event.key === "Escape") { document.querySelectorAll(".nav-dropdown.is-open").forEach(x => { x.classList.remove("is-open"); x.querySelector("button").setAttribute("aria-expanded", "false"); }); toggle.setAttribute("aria-expanded", "false"); panel.classList.remove("is-open"); } });
+}
