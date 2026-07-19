@@ -33,7 +33,6 @@ In `js/config.js`, fill in:
 
 - `SITE_CONFIG.links.discord`, `cad`, `tiktok`, and `youtube`;
 - each department’s `application` property in `SITE_CONFIG.departments` (SAST, BCSO, LSPD, SAFR, SADOT, and SACD).
-- `SITE_CONFIG.applications.sast`, `bcso`, `lspd`, `safr`, and `sadot`.
 
 Use complete HTTPS URLs. Blank values intentionally render as disabled **Coming Soon** controls. Configured external links automatically open in a new tab with `rel="noopener noreferrer"`.
 
@@ -41,14 +40,8 @@ Use complete HTTPS URLs. Blank values intentionally render as disabled **Coming 
 
 - Main branding logo and favicon.
 - Eight hero backgrounds and six department logos.
-- Official mission statements for every department.
 - All official server-rule text.
 - All final FAQ answers.
 - Discord, CAD, TikTok, YouTube, and six department application URLs.
-- Seven hero backgrounds and five department logos.
-- Official mission statements for every department.
-- All official server-rule text.
-- All final FAQ answers.
-- Discord, CAD, TikTok, YouTube, and five department application URLs.
 
 The placeholder labels are deliberate and should remain visible until official content is supplied, preventing draft material from being mistaken for policy.

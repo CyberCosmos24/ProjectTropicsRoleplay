@@ -6,3 +6,7 @@
 .department-page .section-heading{border-left:4px solid var(--department-accent);padding-left:1rem}
 .button--department{color:var(--department-contrast,#fff);background:var(--department-accent);border-color:var(--department-accent)}
 .department-page .cta,.department-page .notice{border-color:var(--department-accent)}
+.department-page :focus-visible{outline-color:var(--department-accent)}
+.department-page .button--department:hover{border-color:var(--department-accent);box-shadow:0 18px 35px color-mix(in srgb,var(--department-accent) 20%,transparent)}
+.department-page .section+.section{border-top:1px solid color-mix(in srgb,var(--department-accent) 28%,transparent)}
+.mission-statement p{margin:0;font-size:clamp(1.05rem,2vw,1.25rem);line-height:1.8}

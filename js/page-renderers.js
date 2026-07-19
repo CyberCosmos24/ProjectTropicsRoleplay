@@ -8,8 +8,7 @@ function renderHome() {
   UI.cta("Ready to Join Project Tropics Roleplay?", "Join our Discord server, review the community resources, and begin your roleplay journey today.", UI.discordButton("Join Discord") + `<a class="button button--ghost" href="how-to-join.html">How to Join</a>`);
 }
 function mission(key) {
-  const text = key === "safr" ? "San Andreas Fire & Rescue is committed to fire protection, emergency medical services, rescue operations, and public safety through professional and realistic emergency response roleplay." : key === "sadot" ? "SADOT supports safe roads through roadside assistance, transportation operations, vehicle recovery, traffic support, emergency-scene assistance, and realistic transportation roleplay." : key === "sacd" ? "SACD provides professional emergency communications by dispatching and coordinating law enforcement, Fire, EMS, and transportation resources, delivering accurate and timely information, and maintaining professionalism throughout realistic emergency communications roleplay." : `${SITE_CONFIG.departments[key].name} is committed to public safety, professionalism, responsible community service, and realistic law enforcement roleplay while holding every member to a high standard of department responsibility.`;
-  return section("Draft for community review", "Mission Statement", `<div class="notice reveal"><strong>Placeholder mission statement</strong><p>${text}</p><small>This editable statement is not the department’s final official mission.</small></div>`);
+  return section("Our commitment", "Mission Statement", `<div class="notice mission-statement reveal"><p>${SITE_CONFIG.departments[key].mission}</p></div>`);
 }
 function renderDepartment(key) {
   const d = SITE_CONFIG.departments[key];
