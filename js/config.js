@@ -1,0 +1,47 @@
+/* Central source of truth for replaceable community content and assets. */
+const SITE_CONFIG = Object.freeze({
+  community: {
+    name: "Project Tropics Roleplay",
+    shortName: "PTRP",
+    copyrightYear: "2026",
+    tagline: "Creating immersive, realistic, and community-driven FiveM roleplay experiences."
+  },
+  links: { discord: "", cad: "", tiktok: "", youtube: "" },
+  assets: {
+    logo: "assets/branding/logo.svg",
+    favicon: "assets/branding/favicon.svg",
+    backgrounds: { home: "assets/backgrounds/home-hero.svg", civilian: "assets/backgrounds/civilian-hero.svg" }
+  },
+  departments: {
+    sast: { name: "San Andreas State Troopers", abbreviation: "SAST", accentColor: "#0F2C70", page: "sast.html", application: "", logo: "assets/departments/sast-logo.svg", background: "assets/backgrounds/sast-hero.svg", tagline: "Professional service and statewide public safety.", description: "Statewide highway enforcement, public safety, and coordinated law enforcement roleplay.", patrol: "Statewide", patrolDescription: "San Andreas State Troopers have statewide jurisdiction and may patrol highways, cities, counties, rural areas, and other locations throughout San Andreas." },
+    bcso: { name: "Blaine County Sheriff’s Office", abbreviation: "BCSO", accentColor: "#007036", page: "bcso.html", application: "", logo: "assets/departments/bcso-logo.svg", background: "assets/backgrounds/bcso-hero.svg", tagline: "Serving Blaine County with integrity and professionalism.", description: "Community-centered law enforcement serving the rural communities of Blaine County.", patrol: "Blaine County", patrolDescription: "The Blaine County Sheriff’s Office primarily serves Blaine County, including rural communities, county roads, towns, and unincorporated areas." },
+    lspd: { name: "Los Santos Police Department", abbreviation: "LSPD", accentColor: "#007BFF", page: "lspd.html", application: "", logo: "assets/departments/lspd-logo.svg", background: "assets/backgrounds/lspd-hero.svg", tagline: "Dedicated service in the heart of Los Santos.", description: "Organized urban policing and responsive public safety within Los Santos.", patrol: "City of Los Santos", patrolDescription: "The Los Santos Police Department primarily serves the City of Los Santos and handles law enforcement operations within the city." },
+    safr: { name: "San Andreas Fire & Rescue", abbreviation: "SAFR", accentColor: "#D41D1D", page: "safr.html", application: "", logo: "assets/departments/safr-logo.svg", background: "assets/backgrounds/safr-hero.svg", tagline: "Fire and EMS professionals serving every emergency.", description: "Professional Fire and EMS response, rescue operations, and community care." },
+    sadot: { name: "San Andreas Department of Transportation", abbreviation: "SADOT", accentColor: "#DC1414", page: "sadot.html", application: "", logo: "assets/departments/sadot-logo.svg", background: "assets/backgrounds/sadot-hero.svg", tagline: "Keeping San Andreas moving safely.", description: "Roadside assistance, recovery, and transportation support across San Andreas." },
+    sacd: { name: "San Andreas Communications Department", abbreviation: "SACD", accentColor: "#F1C40F", page: "sacd.html", application: "", logo: "assets/departments/sacd-logo.svg", background: "assets/backgrounds/sacd-hero.svg", tagline: "The Link Between the Public and Emergency Services", description: "Emergency communications and coordinated dispatch support for every community department." }
+  }
+});
+
+const SITE_CONTENT = Object.freeze({
+  homeFeatures: [
+    ["🚘", "200+ Vehicles", "Explore more than 200 civilian, emergency services, and department vehicles available throughout the community."],
+    ["🤝", "Active Community", "Join an active and welcoming community with regular roleplay sessions, community events, and opportunities to participate."],
+    ["🛡️", "Realistic Departments", "Our emergency services and transportation departments provide organized, realistic, and enjoyable roleplay experiences."],
+    ["🏪", "Player-Operated Businesses", "Apply to own, manage, or work for player-operated businesses that create new opportunities throughout the community."],
+    ["📈", "Active Leadership and Leadership Paths", "Our active leadership team supports community operations while providing opportunities for members to grow into department, staff, and community leadership positions."],
+    ["↻", "Constant Updates", "Project Tropics Roleplay regularly receives new vehicles, features, scripts, department improvements, and community updates."]
+  ],
+  subdivisions: {
+    sast: [["🚓","Traffic / Speed Unit","Focuses on highway safety, speed enforcement, reckless driving, traffic stops, collision response, and enforcement operations throughout San Andreas."],["🚁","Air Unit","Provides aerial observation, pursuit assistance, search operations, scene coordination, and statewide support for ground personnel."],["🛡️","ERT / Bomb Unit","Responds to high-risk incidents, tactical operations, suspicious devices, explosive threats, and situations requiring specialized equipment and training."],["🔎","Investigations Unit","Investigates serious and complex crimes, gathers evidence, interviews involved individuals, and supports criminal cases throughout the state."]],
+    bcso: [["🌲","Game Warden","Enforces wildlife, hunting, fishing, boating, and environmental laws while supporting rural and wilderness operations throughout Blaine County."],["🔎","Criminal Investigations Unit","Investigates serious crimes, gathers evidence, conducts interviews, identifies suspects, and develops criminal cases.","CIU"],["⚓","Marine Unit","Conducts water-based patrols, responds to boating incidents, supports water rescues, and enforces laws throughout the county’s waterways."],["🚁","Air Unit","Provides aerial observation, pursuit assistance, search operations, scene coordination, and support for ground personnel."],["🛡️","ERT / Bomb Unit","Responds to high-risk incidents, tactical operations, suspicious devices, explosive threats, and emergencies requiring specialized equipment and training."],["🏍️","Motorbike Unit","Supports traffic enforcement, escorts, roadway operations, and enforcement in areas where motorcycle mobility is beneficial.","Part of the Traffic Unit"],["🚦","Traffic Unit","Conducts traffic enforcement, responds to roadway incidents, investigates collisions, supports traffic control, and promotes safe driving throughout Blaine County."],["🐕","K-9 Unit","Uses trained police canines to assist with searches, suspect apprehension, detection operations, tracking, and other law-enforcement duties."]],
+    lspd: [["🚦","Traffic Unit","Conducts traffic enforcement, responds to roadway incidents, investigates collisions, manages traffic control, and promotes safe driving within Los Santos."],["🚁","Air Unit","Provides aerial observation, pursuit assistance, search operations, scene coordination, and support for officers throughout Los Santos."],["⚓","Marine Unit","Conducts water-based patrols, responds to boating incidents, assists with water rescues, and supports enforcement operations in and around the city’s waterways."],["🔎","Criminal Investigations Unit","Investigates serious crimes, gathers evidence, conducts interviews, identifies suspects, and develops criminal cases.","CIU"],["🕵️","Gang Unit","Investigates gang-related activity, gathers intelligence, supports enforcement operations, and works to address organized criminal activity within Los Santos."],["🛡️","ERT / Bomb Unit","Responds to high-risk incidents, tactical operations, suspicious devices, explosive threats, and emergencies requiring specialized equipment and training."],["🐕","K-9 Unit","Uses trained police canines to assist with searches, suspect apprehension, detection operations, tracking, and other law-enforcement duties."]]
+  },
+  civilianFeatures: [
+    ["💳", "Economy", "Experience an integrated economy system designed to support realistic civilian roleplay.", ["Personal Bank Accounts", "Shared Bank Accounts", "Stock Market", "Financial Transactions", "Investments", "And More"]],
+    ["🏪", "Businesses", "Apply to own, manage, or work for player-operated businesses throughout San Andreas. Members can help operate businesses, serve customers, manage employees, and create new roleplay opportunities throughout the community."],
+    ["🚗", "200+ Civilian Vehicles", "Choose from an extensive selection of more than 200 civilian vehicles, including everyday vehicles, trucks, luxury vehicles, and performance vehicles."],
+    ["🧰", "Custom Roleplay Scripts", "Project Tropics Roleplay features a growing collection of scripts designed to create immersive and realistic interactions. From repairing vehicles to capturing scenes and using interactive tools, these systems help bring civilian roleplay to life.", ["Mechanic System", "Camera System", "Drone System", "Emotes", "And More"]],
+    ["👋", "Extensive Emote Menu", "Express your character through a large collection of emotes and animations for conversations, activities, work, social interactions, and realistic roleplay scenarios."],
+    ["🌴", "Endless Civilian Opportunities", "Create your own unique story through player-operated businesses, community events, custom scripts, vehicles, and everyday civilian interactions."]
+  ]
+});
