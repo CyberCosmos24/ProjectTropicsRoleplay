@@ -18,7 +18,7 @@ Then open `http://localhost:8000/`. Serving through HTTP is recommended instead 
 - `css/` separates global, navigation, card, footer, animation, and responsive styles.
 - `js/config.js` is the single source of truth for branding, external URLs, applications, image paths, and department identity.
 - `js/components.js` provides reusable UI components; `js/page-renderers.js` composes each page; the remaining scripts manage navigation, FAQs, animations, and startup.
-- `assets/branding/`, `assets/backgrounds/`, and `assets/departments/` contain original, clearly labeled SVG placeholders. Reserved `assets/civilian/`, `assets/icons/`, and `assets/social/` folders are ready for future media.
+- `assets/branding/` and `assets/backgrounds/` contain clearly labeled SVG placeholders, while `assets/departments/` contains the current department logo assets. Reserved `assets/civilian/`, `assets/icons/`, and `assets/social/` folders are ready for future media.
 
 ## Replace images
 
@@ -39,7 +39,7 @@ Use complete HTTPS URLs. Blank values intentionally render as disabled **Coming 
 ## Placeholder content remaining
 
 - Main branding logo and favicon.
-- Eight hero backgrounds and six department logos.
+- Eight hero backgrounds and the SADOT department logo.
 - All official server-rule text.
 - All final FAQ answers.
 - Discord, CAD, TikTok, YouTube, and six department application URLs.
