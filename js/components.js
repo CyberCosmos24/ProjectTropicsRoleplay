@@ -7,6 +7,7 @@ function externalButton(url, label, className = "button button--primary") {
 }
 const discordButton = label => externalButton(SITE_CONFIG.links.discord, label, "button button--discord");
 const cadButton = label => externalButton(SITE_CONFIG.links.cad, label, "button button--cad");
+const externalApplicationButton = (url, label = "Apply to Join") => externalButton(url, label, "button button--primary");
 const applicationButton = (key, label = "Apply to Join") => SITE_CONFIG.departments[key].application ? externalButton(SITE_CONFIG.departments[key].application, label, "button button--department") : `<span class="button button--department button--disabled" aria-disabled="true">Applications Coming Soon</span>`;
 function hero({ key, eyebrow = "Project Tropics Roleplay", title, text, logo, actions = "" }) {
   return `<section class="hero" data-background="${key}"><div class="hero__overlay"></div><div class="container hero__content reveal">${logo ? `<img class="hero__logo" data-department-logo="${logo}" width="180" height="180" alt="${SITE_CONFIG.departments[logo].name} logo placeholder">` : ""}<p class="eyebrow">${eyebrow}</p><h1>${title}</h1><p class="hero__lead">${text}</p><div class="button-row">${actions}</div></div></section>`;
@@ -15,7 +16,7 @@ function featureCard(item) { return `<article class="card feature-card reveal"><
 const cardGrid = (items, type = "feature") => `<div class="card-grid card-grid--${type}">${items.map(featureCard).join("")}</div>`;
 function subdivisionCard(item) { return `<article class="card subdivision-card department-accent reveal"><span class="card__icon" aria-hidden="true">${item[0]}</span><h3>${item[1]}</h3><p>${item[2]}</p></article>`; }
 const subdivisionGrid = items => `<div class="card-grid card-grid--subdivisions">${items.map(subdivisionCard).join("")}</div>`;
-function departmentCard(key) { const d = SITE_CONFIG.departments[key]; return `<article class="card department-card department-accent reveal" style="--department-accent:${d.accentColor};--department-contrast:${contrastColor(d.accentColor)}"><img data-department-logo="${key}" width="112" height="112" loading="lazy" alt="${d.name} logo placeholder"><p class="eyebrow">${d.abbreviation}</p><h3>${d.name}</h3><p>${d.description}</p>${internalButton(d.page, `View ${d.abbreviation}`, "button button--department")}</article>`; }
+function departmentCard(key) { const d = SITE_CONFIG.departments[key]; return `<article class="card department-card department-accent reveal" style="--department-accent:${d.accentColor};--department-contrast:${contrastColor(d.accentColor)}"><img data-department-logo="${key}" width="112" height="112" loading="lazy" alt="${d.name} logo placeholder"><p class="eyebrow">${d.abbreviation}</p><h3>${d.name}</h3><p>${d.description}</p>${internalButton(d.page, `View ${d.abbreviation}`, "button button--department")}${applicationButton(key, `Apply to ${d.abbreviation}`)}</article>`; }
 function cta(title, text, actions) { return `<section class="section"><div class="container cta reveal"><p class="eyebrow">Your next chapter starts here</p><h2>${title}</h2><p>${text}</p><div class="button-row">${actions}</div></div></section>`; }
 function renderNavbar() {
   const page = document.body.dataset.page;
@@ -28,4 +29,4 @@ function renderFooter() {
   const quick = [["index.html","Home"],["civilian.html","Civilian"],["rules.html","Server Rules"],["faq.html","FAQ"],["how-to-join.html","How to Join"]];
   document.querySelector("#global-footer").innerHTML = `<div class="container footer-grid"><div><h2>Quick Links</h2>${quick.map(x=>`<a href="${x[0]}">${x[1]}</a>`).join("")}</div><div><h2>Departments</h2>${Object.values(SITE_CONFIG.departments).map(d=>`<a href="${d.page}">${d.name}</a>`).join("")}</div><div><h2>Connect</h2>${discordButton("Join Discord")}${cadButton("Open CAD")}</div></div><div class="container footer-bottom"><strong>${SITE_CONFIG.community.name}</strong><p>${SITE_CONFIG.community.tagline}</p><p>© ${SITE_CONFIG.community.copyrightYear} ${SITE_CONFIG.community.name}. All Rights Reserved.</p><p class="disclaimer">Project Tropics Roleplay is an independent FiveM roleplay community and is not affiliated with Rockstar Games, Take-Two Interactive, Cfx.re, or FiveM.</p></div>`;
 }
-window.UI = { hero, featureCard, cardGrid, subdivisionCard, subdivisionGrid, departmentCard, cta, discordButton, cadButton, applicationButton };
+window.UI = { hero, featureCard, cardGrid, subdivisionCard, subdivisionGrid, departmentCard, cta, discordButton, cadButton, applicationButton, externalApplicationButton };
