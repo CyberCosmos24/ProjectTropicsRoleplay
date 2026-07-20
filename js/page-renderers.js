@@ -2,7 +2,7 @@
 const section = (eyebrow, title, body) => `<section class="section"><div class="container"><header class="section-heading reveal"><p class="eyebrow">${eyebrow}</p><h2>${title}</h2></header>${body}</div></section>`;
 const listCards = items => UI.cardGrid(items);
 function renderHome() {
-  return UI.hero({ key:"home", title:"Welcome to Project Tropics Roleplay", text:"Project Tropics Roleplay is a growing FiveM community focused on realistic roleplay, active departments, community involvement, and opportunities for members to grow.", actions:UI.discordButton("Join Our Discord") + `<a class="button button--ghost" href="how-to-join.html">Learn How to Join</a>` }) +
+  return UI.hero({ key:"home", siteLogo:true, title:"Welcome to Project Tropics Roleplay", text:"Project Tropics Roleplay is a growing FiveM community focused on realistic roleplay, active departments, community involvement, and opportunities for members to grow.", actions:UI.discordButton("Join Our Discord") + `<a class="button button--ghost" href="how-to-join.html">Learn How to Join</a>` }) +
   section("Built for meaningful roleplay", "What We Offer", UI.cardGrid(SITE_CONTENT.homeFeatures)) +
   section("Serve your community", "Explore Our Departments", `<div class="card-grid card-grid--departments">${Object.keys(SITE_CONFIG.departments).map(UI.departmentCard).join("")}</div>`) +
   UI.cta("Ready to Join Project Tropics Roleplay?", "Join our Discord server, review the community resources, and begin your roleplay journey today.", UI.discordButton("Join Discord") + `<a class="button button--ghost" href="how-to-join.html">How to Join</a>`);

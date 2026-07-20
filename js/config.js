@@ -14,8 +14,8 @@ const SITE_CONFIG = Object.freeze({
   },
   applications: { civilian: "https://guildbase.gg/apply/project-tropics-roleplay/civilian-operations" },
   assets: {
-    logo: "assets/branding/logo.svg",
-    favicon: "assets/branding/favicon.svg",
+    logo: "assets/branding/Transparen_Logoo.png",
+    favicon: "assets/branding/Transparen_Logoo.png",
     backgrounds: { home: "assets/backgrounds/home_background.png", civilian: "assets/backgrounds/CIV_Backround.png" }
   },
   departments: {
