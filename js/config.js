@@ -6,7 +6,12 @@ const SITE_CONFIG = Object.freeze({
     copyrightYear: "2026",
     tagline: "Creating immersive, realistic, and community-driven FiveM roleplay experiences."
   },
-  links: { discord: "", cad: "", tiktok: "", youtube: "" },
+  links: {
+    discord: "",
+    cad: "https://cad.projecttropicsrp.com",
+    tiktok: "https://www.tiktok.com/@dispatcherjjj",
+    youtube: "https://www.youtube.com/@Dispatcher_J"
+  },
   applications: { civilian: "https://guildbase.gg/apply/project-tropics-roleplay/civilian-operations" },
   assets: {
     logo: "assets/branding/logo.svg",

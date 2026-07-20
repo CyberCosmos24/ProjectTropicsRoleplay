@@ -3,7 +3,7 @@
 .department-accent{border-color:var(--department-accent)}
 .department-accent:hover{border-color:var(--department-accent);box-shadow:0 18px 35px color-mix(in srgb,var(--department-accent) 20%,transparent)}
 .department-accent .card__icon,.department-accent .eyebrow{color:var(--department-accent)}
-.department-card{border-top-width:4px}.department-card .button--department{width:100%}
+.department-card{border-top-width:4px}.department-card__actions{display:flex;flex-direction:column;gap:14px;width:100%;margin-top:auto}.department-card__actions .button--department{width:100%;margin-top:0}
 .department-page .card{border-color:var(--department-accent);border-top-width:3px}
 .department-page .card:hover{border-color:var(--department-accent);box-shadow:0 18px 35px color-mix(in srgb,var(--department-accent) 20%,transparent)}
 .department-page .card__icon{color:var(--department-accent)}
