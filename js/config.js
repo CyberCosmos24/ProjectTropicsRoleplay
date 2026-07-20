@@ -7,7 +7,7 @@ const SITE_CONFIG = Object.freeze({
     tagline: "Creating immersive, realistic, and community-driven FiveM roleplay experiences."
   },
   links: {
-    discord: "",
+    discord: "https://discord.gg/ySwWpH8FgH",
     cad: "https://cad.projecttropicsrp.com",
     tiktok: "https://www.tiktok.com/@dispatcherjjj",
     youtube: "https://www.youtube.com/@Dispatcher_J"
