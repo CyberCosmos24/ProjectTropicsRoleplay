@@ -38,9 +38,8 @@ Use complete HTTPS URLs. Blank values intentionally render as disabled **Coming 
 
 ## Placeholder content remaining
 
-- Eight hero backgrounds and the SADOT department logo.
+- Eight hero backgrounds.
 - All official server-rule text.
-- All final FAQ answers.
 - Discord, CAD, TikTok, YouTube, and six department application URLs.
 
 The placeholder labels are deliberate and should remain visible until official content is supplied, preventing draft material from being mistaken for policy.
