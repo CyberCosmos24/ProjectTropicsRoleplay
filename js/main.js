@@ -10,5 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll("[data-department-logo]").forEach(img => img.src = SITE_CONFIG.departments[img.dataset.departmentLogo].logo);
   document.querySelectorAll("[data-background]").forEach(el => { const key = el.dataset.background; el.style.backgroundImage = `url('${SITE_CONFIG.departments[key]?.background || SITE_CONFIG.assets.backgrounds[key]}')`; });
   document.querySelector("link[rel='icon']").href = SITE_CONFIG.assets.favicon;
-  initializeNavigation(); initializeFAQ(); initializeAnimations();
+  initializeNavigation(); initializeFAQ();
+  if (typeof initializeGallery === "function") initializeGallery();
+  initializeAnimations();
 });
