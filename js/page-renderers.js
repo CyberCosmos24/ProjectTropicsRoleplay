@@ -66,7 +66,10 @@ const galleryImages = [
   ["lspdcarone.png", "LSPD patrol vehicle"], ["lspdinsandy.png", "LSPD patrol in Sandy Shores"],
   ["medflgith.png", "Medical flight response"], ["mustangltd.png", "Law enforcement Mustang"],
   ["ravetruck.png", "Community event truck"], ["redkaitruck.png", "Red community truck"],
-  ["triodeptpic.png", "Three departments together"]
+  ["triodeptpic.png", "Three departments together"],
+  ["paletobaybanner.png", "Welcome to Paleto Bay sign above a tree-lined highway"],
+  ["graytruckinsanady.png", "Gray pickup truck outside an industrial building in Sandy Shores"],
+  ["sstbacoe.png", "State troopers and sheriff personnel posing beside a pickup truck in Paleto Bay"]
 ];
 function renderGallery() {
   const images = galleryImages.map(([file, alt], index) => `<button class="gallery-card reveal" type="button" data-gallery-index="${index}" aria-label="Open image ${index + 1} of ${galleryImages.length}: ${alt}"><img src="assets/gallery/${file}" alt="${alt}" loading="lazy"></button>`).join("");
